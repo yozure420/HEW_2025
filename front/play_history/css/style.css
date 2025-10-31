@@ -1,0 +1,286 @@
+@charset "UTF-8";
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans',
+    'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo;
+line-height: 1.8;
+background: linear-gradient(135deg, #2a2b4e, #543b66, #1e2a4f);
+background-size: 400% 400%;
+color: white;
+animation: bgflow 10s ease infinite;
+min-height: 100vh;
+}
+
+/* 背景アニメーション */
+@keyframes bgflow {
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+
+/* header */
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 25px 40px;
+position: sticky;
+top: 0;
+z-index: 10;
+background-color: rgba(0, 0, 0, 0.25);
+backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-wrapper img {
+width: 120px;
+}
+
+.search-box {
+display: flex;
+align-items: center;
+background: rgba(255, 255, 255, 0.15);
+border-radius: 30px;
+padding: 8px 20px;
+width: 40%;
+backdrop-filter: blur(10px);
+}
+
+.search-box i {
+color: #fff;
+margin-right: 12px;
+}
+
+.search-box input {
+background: none;
+border: none;
+color: #fff;
+width: 100%;
+outline: none;
+font-size: 14px;
+}
+
+.icon-wrapper {
+display: flex;
+gap: 20px;
+}
+
+.icon-wrapper i {
+color: #fff;
+font-size: 22px;
+}
+
+/* メインビジュアル */
+/* .main-visual {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 60vh;
+text-align: center;
+background: rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(20px);
+border-radius: 40px;
+margin: 60px auto;
+width: 80%;
+box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+} */
+
+.main-flex {
+    display: flex;
+    align-items: flex-start;
+}
+
+.nav-wrapper {
+    width: 220px; /* ナビの幅を調整 */
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.15);
+    border-right: 1px solid rgba(255,255,255,0.08);
+    padding: 30px 0 30px 20px;
+}
+
+.icon-box{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.main-content {
+    flex: 1;
+    padding: 0 40px;
+}
+
+.main-container {
+padding: 30px;
+}
+
+.main-title {
+font-size: 48px;
+letter-spacing: 2px;
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+.main-subtitle {
+font-size: 18px;
+opacity: 0.8;
+}
+
+/* 音楽リスト */
+.music-list-wrapper {
+width: 80%;
+margin: 50px auto 100px;
+}
+
+.music-list-recommendation-wrapper {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.music-list-recommendation-viewmore {
+display: flex;
+align-items: center;
+gap: 10px;
+cursor: pointer;
+opacity: 0.8;
+transition: opacity 0.3s;
+}
+
+.music-list-recommendation-viewmore:hover {
+opacity: 1;
+}
+
+.music-list {
+display: block;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+}
+
+.music-list-content {
+background: rgba(255, 255, 255, 0.15);
+backdrop-filter: blur(10px);
+width: 100%;
+margin-bottom: 10px;
+border-radius: 20px;
+padding: 15px;
+display: flex;
+align-items: center;
+transition: transform 0.3s, background 0.3s;
+}
+
+.music-list-content:hover {
+transform: translateY(-5px);
+background: rgba(255, 255, 255, 0.25);
+}
+
+.music-list-thumbnail {
+width: 60px;
+height: 60px;
+border-radius: 20%;
+background: linear-gradient(135deg, #56d364, #c2d985);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.music-list-thumbnail i {
+color: white;
+font-size: 28px;
+}
+
+.music-list-character {
+margin-left: 15px;
+flex: 1;
+}
+
+.music-list-character p {
+font-size: 18px;
+margin-bottom: 6px;
+}
+
+.music-list-character-small {
+display: flex;
+justify-content: space-between;
+opacity: 0.8;
+}
+
+.music-list-character-small-plays {
+    display: block;
+    margin-top: 50px; /* 必要なら余白も調整 */
+}
+
+.main-content-two-column {
+    display: flex;
+    gap: 40px;
+}
+
+.main-content-left {
+    flex: 6;
+}
+
+.history-side-panel {
+    flex: 4;
+    background: rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 30px 20px;
+    min-width: 260px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+}
+
+.history-side-panel h3 {
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.history-search {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.history-search input {
+    flex: 1;
+    width: 100%;
+    padding: 2px 3px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+}
+
+.history-search button,
+.history-clear-btn,
+.history-manage-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    background: #543b66;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: background 0.2s;
+}
+
+.history-search button:hover,
+.history-clear-btn:hover,
+.history-manage-btn:hover {
+    background: #2a2b4e;
+}

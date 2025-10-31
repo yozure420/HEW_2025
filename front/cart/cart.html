@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HEW</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!--font-awesomeの読み込み-->
+    <link
+      href="https://use.fontawesome.com/releases/v6.6.0/css/all.css"
+      rel="stylesheet"
+    />
+
+    <!-- googleフォントの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="cart.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <!-- ロゴ -->
+        <div class="logo-wrapper">
+          <img src="./img/logo.png" alt="ロゴ" />
+        </div>
+        <!-- end logo-wrapper -->
+
+        <!-- 検索窓 -->
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="search" placeholder="キーワードで検索" />
+        </div>
+        <!-- end search-box -->
+
+        <div class="icon-wrapper">
+          <!-- 通知アイコン -->
+          <a href="">
+            <div class="i-wrapper">
+              <i class="fa-solid fa-bell"></i>
+            </div>
+          </a>
+
+          <!-- ユーザーアイコン -->
+          <a href="">
+            <div class="i-wrapper">
+              <i class="fa-solid fa-circle-user"></i>
+            </div>
+          </a>
+        </div>
+        <!-- end icon-wrapper -->
+      </header>
+
+      <div class="cart-main">
+        <h2 class="cart-title">CART</h2>
+        <div class="cart-items">
+          <!-- カート内商品繰り返し部分 -->
+          {% for item in cart_items %}
+          <div class="cart-item">
+            <img src="{{ item.image_url }}" alt="{{ item.name }}" />
+            <div class="item-details">
+              <h3>{{ item.name }}</h3>
+              <p>Price: ${{ item.price }}</p>
+              <p>Quantity: {{ item.quantity }}</p>
+              <p>Total: ${{ item.total_price }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="cart-summary">
+          <h3>Cart Summary</h3>
+          <p>Total Items: {{ total_items }}</p>
+          <p>Total Price: ${{ total_price }}</p>
+          <button class="checkout-button">Proceed to Checkout</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer読み込み -->
+  </body>
+</html>

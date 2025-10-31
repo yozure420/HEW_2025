@@ -1,0 +1,145 @@
+/* 音楽・素材切り替えボタン */
+.toggle-button-wrapper {
+    width: fit-content;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    border-radius: 20px;
+    margin: 10px auto 30px;
+}
+
+.toggle-button-wrapper p {
+    padding: 3px 40px;
+    font-size: 12px;
+}
+
+.select-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    color: white;
+}
+
+/* おすすめ */
+.top-list-wrapper {
+    width: 80%;
+    max-width: 1000px;
+    margin: 100px auto 10px;
+}
+
+.music-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.music-list-content {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 20px;
+    container-type: inline-size;
+}
+
+.music-list-thumbnail {
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(-45deg, #67D944, #CFCD85);
+    border-radius: 30%;
+    text-align: center;
+    container-type: inline-size;
+    min-width: 50px;
+}
+
+.music-list-thumbnail i {
+    line-height: 50px;
+    font-size: 20cqw;
+    color: white;
+}
+
+.music-list-character {
+    flex-grow: 1;
+    height: 50px;
+    color: white;
+    margin-left: 10px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.music-list-character p {
+    font-size: 8cqw;
+    line-height: 30px;
+}
+
+.music-list-character-small {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.music-list-character-small p {
+    font-size: 6cqw;
+    line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.music-list-character-small-price {
+    margin-left: auto;
+}
+
+.music-list-recommendation-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.music-list-recommendation-wrapper h2 {
+    /* font-weight: normal; */
+    color: white;
+    font-size: 30px;
+}
+
+.music-list-recommendation-viewmore {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* おすすめユーザー */
+.user-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 2em;
+}
+
+.user-list-content {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 12px 20px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
+.user-icon-wrapper {
+    container-type: inline-size;
+}
+
+.user-icon-wrapper i {
+    font-size: 80cqw;
+}
+
+.user-icon-wrapper p {
+    font-size: 20cqw;
+}
+
+.user-follow-wrapper {
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-top: 10px;
+    container-type: inline-size;
+}
+
+.user-follow-wrapper p {
+    font-size: 20cqw;
+}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+body {
+  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans",
+    "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
+    "ＭＳ Ｐゴシック", "MS PGothic";
+  line-height: 1.8;
+}
+
+ui,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* cart */

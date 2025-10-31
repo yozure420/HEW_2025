@@ -1,0 +1,69 @@
+.music-swiper {
+    position: relative;
+}
+
+.swiper-pagination.swiper-pagination-horizontal {
+    bottom: -35px;
+}
+
+.swiper-pagination-bullet {
+    background-color: white;
+}
+
+.swiper {
+    /* width: 85%; */
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.swiper-wrapper {
+    width: 100%;
+}
+
+.swiper-slide {
+    color: white;
+    /* width: 100%; */
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    line-height: 100%;
+    border-radius: 30%;
+    background: linear-gradient(-45deg, #67D944, #CFCD85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    container-type: inline-size;
+}
+
+.swiper-slide i {
+    font-size: 20cqw;
+}
+
+.swiper-slide {
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+    transform: scale(0.7);
+    opacity: 0.5;
+    border-radius: 35%;
+    filter: blur(5px);
+}
+
+.swiper-slide-active {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+.swiper-slide-active:hover {
+    filter: opacity(50%);
+    transition: 0.1s;
+}
+
+.swiper-slide:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-prev) {
+    transform: scale(0.6);
+    opacity: 0.5;
+    border-radius: 40%;
+    filter: blur(10px);
+}

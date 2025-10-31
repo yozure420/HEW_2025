@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{# title #}
+{% block title %}Home{% endblock %}
+
+{# head #}
+{% block head_extra %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="toggle-button-wrapper">
+        <p class="select-button">Music</p>
+        <p>Material</p>
+    </div><!-- end toggle-button-wrapper -->
+
+    <div class="music-swiper">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {% for i in range(10) %}
+                    <div class="swiper-slide"><i class="fa-solid fa-music"></i></div>
+                {% endfor %}
+            </div><!-- end swiper-wrapper -->
+        </div><!-- end swiper -->
+        <div class="swiper-pagination"></div>
+    </div><!-- end music-swiper -->
+
+    <div class="top-list-wrapper">
+
+        <div class="music-list-recommendation-wrapper">
+            <h2>おすすめ</h2>
+
+            <a href="">
+                <div class="music-list-recommendation-viewmore">
+                    <p>ViewMore</p>
+                    <p>⇀</p>
+                </div><!-- end music-list-recommendation-viewmore -->
+            </a>
+
+        </div><!-- end music-list-recommendation-wrapper -->
+
+        <div class="music-list">
+
+            {% for user in users %}
+                <a href="">
+                    <div class="music-list-content">
+                        <div class="music-list-thumbnail">
+                            <i class="fa-solid fa-music"></i>
+                        </div><!-- end music-list-thumbnail -->
+                        <div class="music-list-character">
+                            <p>{{ user.music }}</p>
+                            <div class="music-list-character-small">
+                                <p>{{ user.name }}</p>
+                                <p class="music-list-character-small-price">¥{{ user.price }}</p>
+                            </div><!-- end music-list-character-small -->
+                        </div><!-- end music-list-character -->
+                    </div><!-- end music-list-content -->
+                </a>
+            {% endfor %}
+
+        </div><!-- end music-list -->
+
+    </div><!-- end top-list-wrapper -->
+
+
+
+    <div class="top-list-wrapper">
+
+        <div class="music-list-recommendation-wrapper">
+            <h2>おすすめユーザー</h2>
+        </div><!-- end music-list-recommendation-wrapper -->
+
+        <div class="user-list">
+
+            {% for i in range(7) %}
+                <a href="">
+                    <div class="user-list-content">
+                        <div class="user-icon-wrapper">
+                            <i class="fa-solid fa-circle-user"></i>
+                            <p>ユーザー名</p>
+                        </div><!-- end user-icon-wrapper -->
+                        <div class="user-follow-wrapper">
+                            <p>フォロー</p>
+                        </div><!-- end user-follow-wrapper -->
+                    </div><!-- end user-list-content -->
+                </a>
+            {% endfor %}
+
+        </div><!-- end user-list -->
+    </div><!-- end top-list-wrapper -->
+
+    <!-- js -->
+    <script src="{{ url_for('static', filename='js/swiper.js') }}"></script>
+{% endblock %}
