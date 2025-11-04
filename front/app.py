@@ -18,7 +18,7 @@ def home():
     ]
     return render_template(
         'home.html',
-        users = users
+        users=users
     )
 
 @app.route('/short')

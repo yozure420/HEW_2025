@@ -205,15 +205,20 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+/* 音楽再生時 */
 .hidden-play-content-wrapper {
     width: calc(100% / 2);
-    background-color: #d94444;
+    background-color: #272727;
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.7);
     position: fixed;
-    bottom: 50px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
+    padding: 15px;
+    border-radius: 20px;
+    color: white;
 }
 
 .play-width {
@@ -226,7 +231,7 @@
 }
 
 .play-thumbnail {
-    width: 60px;
+    width: 50px;
     aspect-ratio: 1 / 1;
     background: linear-gradient(-45deg, #67D944, #CFCD85);
     border-radius: 30%;
@@ -236,7 +241,7 @@
 }
 
 .play-thumbnail i {
-    line-height: 60px;
+    line-height: 50px;
     font-size: 20cqw;
     color: white;
     width: 100%;
@@ -250,19 +255,50 @@
 }
 
 .play-music {
-    line-height: 35px;
+    line-height: 30px;
     font-size: 20px;
 }
 
 .play-name {
-    line-height: 25px;
+    line-height: 20px;
 }
 
 .play-content-center {
     text-align: center;
-    font-size: 30px;
+    align-items: center;
+    height: 50px;
+}
+
+.play-content-center i {
+    vertical-align: middle;
+}
+
+.step-icon {
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.pause-icon {
+    font-size: 35px;
+    line-height: 50px;
+}
+
+.play-content-center i {
+    margin: 0 20px;
 }
 
 .play-content-right {
     text-align: right;
+    font-size: 20px;
+    height: 50px;
+    align-items: center;
+    line-height: 50px;
+}
+
+.play-content-right i {
+    margin: 0 5px;
+}
+
+.play-hidden {
+    display: none;
 }
