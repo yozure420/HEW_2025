@@ -20,7 +20,7 @@
 }
 
 /* おすすめ */
-.top-list-wrapper {
+.top-list-wrapper, .music-list-wrapper {
     width: 80%;
     max-width: 1000px;
     margin: 100px auto 10px;
@@ -40,6 +40,11 @@
     container-type: inline-size;
 }
 
+.music-list-content:hover {
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.7);
+    transition: 0.15s;
+}
+
 .music-list-thumbnail {
     width: 50px;
     aspect-ratio: 1 / 1;
@@ -48,12 +53,17 @@
     text-align: center;
     container-type: inline-size;
     min-width: 50px;
+    border: none;
 }
 
 .music-list-thumbnail i {
     line-height: 50px;
     font-size: 20cqw;
     color: white;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 30%;
+    border: none;
 }
 
 .music-list-character {
@@ -121,6 +131,11 @@
     color: white;
 }
 
+.user-list-content:hover {
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.7);
+    transition: 0.15s;
+}
+
 .user-icon-wrapper {
     container-type: inline-size;
 }
@@ -142,4 +157,8 @@
 
 .user-follow-wrapper p {
     font-size: 20cqw;
+}
+
+.icon-hover-background {
+    background-color: rgba(0, 0, 0, 0.7);
 }

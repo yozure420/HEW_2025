@@ -33,7 +33,7 @@
         <div class="music-list-recommendation-wrapper">
             <h2>おすすめ</h2>
 
-            <a href="">
+            <a href="{{ url_for('music_list') }}">
                 <div class="music-list-recommendation-viewmore">
                     <p>ViewMore</p>
                     <p>⇀</p>
@@ -46,9 +46,9 @@
 
             {% for user in users %}
                 <a href="">
-                    <div class="music-list-content">
+                    <div class="music-list-content icon-hover">
                         <div class="music-list-thumbnail">
-                            <i class="fa-solid fa-music"></i>
+                            <i class="fa-solid fa-music icon-toggle"></i>
                         </div><!-- end music-list-thumbnail -->
                         <div class="music-list-character">
                             <p>{{ user.music }}</p>
@@ -94,4 +94,5 @@
 
     <!-- js -->
     <script src="{{ url_for('static', filename='js/swiper.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
 {% endblock %}

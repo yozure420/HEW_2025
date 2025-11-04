@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{# title #}
+{% block title %}Music_list{% endblock %}
+
+{# headに追加要素あれば #}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{# 中身 #}
+{% block content %}
+
+<div class="music-list-wrapper">
+    <div class="music-list">
+
+        {% for i in range(50) %}
+        <a href="">
+            <div class="music-list-content icon-hover">
+                <div class="music-list-thumbnail">
+                    <i class="fa-solid fa-music icon-toggle"></i>
+                </div><!-- end music-list-thumbnail -->
+                <div class="music-list-character">
+                    <p>曲名</p>
+                    <div class="music-list-character-small">
+                        <p>作曲者名</p>
+                        <p class="music-list-character-small-price">¥1000</p>
+                    </div><!-- end music-list-character-small -->
+                </div><!-- end music-list-character -->
+            </div><!-- end music-list-content -->
+        </a>
+        {% endfor %}
+
+    </div><!-- end music-list -->
+</div><!-- end music-list-wrapper -->
+
+<!-- JS -->
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+{% endblock %}

@@ -57,5 +57,24 @@ def user():
         'user.html'
     )
 
+@app.route('/music_list')
+def music_list():
+    # from user import User
+    # users = [
+    #     User('宵待ちのアリア', '橘 奏', 250),
+    #     User('サイレント・コード', 'Chronos Ship', 1800),
+    #     User('砂漠の残光', 'エル・ファリド', 1500),
+    #     User('都市迷路', '零式サウンドシステム', 300),
+    #     User('霧と埠頭のワルツ', '藍沢 雫', 2800),
+    #     User('無限回廊の夢', 'Astral Compass', 2000),
+    #     User('七月のシークレット・ベース', '風見 悠', 250),
+    #     User('ノスタルジア銀河', '星野 天音', 500)
+    # ]
+
+    return render_template(
+        'music_list.html',
+        # users = users
+    )
+
 if __name__ == '__main__':
     app.run('0.0.0.0', 80, True)
