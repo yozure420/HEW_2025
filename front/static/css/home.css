@@ -20,7 +20,8 @@
 }
 
 /* おすすめ */
-.top-list-wrapper, .music-list-wrapper {
+.top-list-wrapper,
+.music-list-wrapper {
     width: 80%;
     max-width: 1000px;
     margin: 100px auto 10px;
@@ -37,7 +38,7 @@
     background-color: rgba(255, 255, 255, 0.2);
     padding: 12px;
     border-radius: 20px;
-    container-type: inline-size;
+    width: fit-content;
 }
 
 .music-list-content:hover {
@@ -51,9 +52,9 @@
     background: linear-gradient(-45deg, #67D944, #CFCD85);
     border-radius: 30%;
     text-align: center;
-    container-type: inline-size;
-    min-width: 50px;
+    width: 50px;
     border: none;
+    container-type: inline-size;
 }
 
 .music-list-thumbnail i {
@@ -66,35 +67,50 @@
     border: none;
 }
 
-.music-list-character {
+.music-list-character-wrapper {
     flex-grow: 1;
     height: 50px;
     color: white;
     margin-left: 10px;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
+    width: 150px;
 }
 
-.music-list-character p {
-    font-size: 8cqw;
-    line-height: 30px;
-}
-
-.music-list-character-small {
+.music-list-character-small,
+.music-list-character {
     display: flex;
     width: 100%;
     align-items: center;
 }
 
 .music-list-character-small p {
-    font-size: 6cqw;
     line-height: 20px;
-    white-space: nowrap;
-    overflow: hidden;
+    font-size: small;
 }
 
-.music-list-character-small-price {
+.music {
+    width: 80%;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+.link-icon {
+    margin-left: auto;
+    color: white;
+    font-size: small;
+}
+
+.name {
+    margin-right: auto;
+    width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price {
     margin-left: auto;
 }
 
@@ -114,6 +130,32 @@
     display: flex;
     align-items: center;
     color: white;
+}
+
+/* ふきだし */
+.music-list-character {
+    position: relative;
+}
+
+.fukidashi {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    z-index: 10;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.music-list-character .link-icon:hover+.fukidashi {
+    display: block;
+    opacity: 1;
 }
 
 /* おすすめユーザー */
@@ -161,4 +203,66 @@
 
 .icon-hover-background {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hidden-play-content-wrapper {
+    width: calc(100% / 2);
+    background-color: #d94444;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.play-width {
+    width: calc(100% / 3);
+}
+
+.play-content-left {
+    text-align: left;
+    display: flex;
+}
+
+.play-thumbnail {
+    width: 60px;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(-45deg, #67D944, #CFCD85);
+    border-radius: 30%;
+    text-align: center;
+    border: none;
+    container-type: inline-size;
+}
+
+.play-thumbnail i {
+    line-height: 60px;
+    font-size: 20cqw;
+    color: white;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 30%;
+    border: none;
+}
+
+.play-character {
+    margin-left: 10px;
+}
+
+.play-music {
+    line-height: 35px;
+    font-size: 20px;
+}
+
+.play-name {
+    line-height: 25px;
+}
+
+.play-content-center {
+    text-align: center;
+    font-size: 30px;
+}
+
+.play-content-right {
+    text-align: right;
 }

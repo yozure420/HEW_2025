@@ -207,7 +207,7 @@ input[type="text"] {
 }
 
 .nav-wrapper:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    /* background-color: rgba(0, 0, 0, 0.1); */
     backdrop-filter: blur(10px);
     transition: 0.2s;
 }
