@@ -1,4 +1,5 @@
 const hoverElements = document.querySelectorAll('.icon-hover');
+const playElement = document.querySelector('.hidden-play-content-wrapper');
 
 hoverElements.forEach(hoverElement => {
     const iconElement = hoverElement.querySelector('.icon-toggle');
@@ -18,5 +19,9 @@ hoverElements.forEach(hoverElement => {
             iconElement.classList.add('fa-music');
             iconElement.classList.remove('icon-hover-background');
         }
+    });
+
+    hoverElement.addEventListener('click', function() {
+        playElement.classList.remove('play-hidden');
     });
 });
