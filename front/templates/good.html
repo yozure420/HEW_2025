@@ -4,8 +4,32 @@
 {% block title %}Good{% endblock %}
 
 {# headに追加要素あれば #}
-{% block head_extra %}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/good.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/popUp.css') }}">
+{% endblock %}
 
 {# 中身 #}
 {% block content %}
+
+{% for i in range(5) %}
+    <div class="same">
+        <div class="card"></div>
+        <div class="content-info">
+            <div class="title-section">
+                <h2>曲名 タイトル</h2>
+                <p>100万回再生</p>
+            </div>
+            <div class="sample-content">
+                <p>サンプルサンプルサンプルサンプル
+                    <br>サンプルサンプルサンプルサンプル
+                </p>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+<!-- JS -->
+<script src="{{ url_for('static', filename='js/good.js') }}"></script>
+
 {% endblock %}
