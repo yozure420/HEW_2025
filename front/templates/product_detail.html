@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{# title #}
+{% block title %}Music_make{% endblock %}
+
+{# headに追加要素あれば #}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/product-detail.css') }}">
+{% endblock %}
+
+{# 中身 #}
+{% block content %}
+<div class="product-detail-wrapper">
+    <div class="product-detail-thumbnail">
+        <i class="fa-solid fa-music"></i>
+    </div><!-- end product-detail-thumbnail -->
+    <div class="product-detail-right">
+        <h2>曲名</h2>
+        <p>¥1000</p>
+
+        <form id="add-to-cart-form">
+            <input type="hidden" name="product_id" value="">
+            <button type="submit" id="add-to-cart-btn">カートに入れる</button>
+            <button type="submit" id="buy-now-btn" data-action="buy_now">すぐ買う</button>
+        </form>
+
+    </div><!-- end product-detail-right -->
+</div><!-- end product-detail-wrapper -->
+{% endblock %}
