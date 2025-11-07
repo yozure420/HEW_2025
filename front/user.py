@@ -1,9 +1,10 @@
 class User:
-    def __init__(self, id, music, name, price):
+    def __init__(self, id, music, name, price, comment):
         self.__id = id
         self.__music = music
         self.__name = name
         self.__price = price
+        self.__comment = comment
     
     @property
     def id(self):
@@ -20,3 +21,7 @@ class User:
     @property
     def price(self):
         return self.__price
+    
+    @property
+    def comment(self):
+        return self.__comment
