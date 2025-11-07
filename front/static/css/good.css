@@ -10,7 +10,7 @@ body {
   min-height: 100vh;
   color: #fff;
 } */
-
+/* 
 .search-bar {
   position: relative;
   max-width: 400px;
@@ -47,7 +47,7 @@ body {
   input::placeholder {
     color: #666;
   }
-}
+} */
 
 main {
   display: flex;
@@ -55,51 +55,50 @@ main {
   margin: 50px 0 0 300px;
   flex-direction: column;
   gap: 20px;
-
-  .same {
-    height: 120px;
-    display: flex;
-    align-items: stretch;
-  }
-
-  .card {
-    width: 50%;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, .1);
-    transition: .3s;
-  }
-
-  .card:hover {
-    background: rgba(255, 255, 255, .15);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
-  }
-
-  .content-info {
-    width: 50%;
-    margin-left: 10px;
-    font-size: 10px;
-
-    .title-section {
-      height: 40%;
-
-      h2 {
-        font-size: 20px;
-        color: #fff;
-      }
-
-      p {
-        color: rgba(255, 255, 255, .8);
-      }
-    }
-
-    .sample-content p {
-      color: rgba(255, 255, 255, .9);
-      font-size: 15px;
-    }
-  }
 }
 
-/* ****************************************************************************************************************************** */
+.same {
+  height: 120px;
+  display: flex;
+  align-items: stretch;
+}
+
+.card {
+  width: 50%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, .1);
+  transition: .3s;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, .15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+}
+
+.content-info {
+  width: 50%;
+  margin-left: 10px;
+  font-size: 10px;
+}
+
+.title-section {
+  height: 40%;
+}
+
+.title-section h2 {
+  font-size: 20px;
+  color: #fff;
+}
+
+.title-section p {
+  color: rgba(255, 255, 255, .8);
+}
+
+
+.sample-content p {
+  color: rgba(255, 255, 255, .9);
+  font-size: 15px;
+}
