@@ -40,7 +40,7 @@
 
             <!-- ユーザーアイコン -->
             <a href="{{ url_for('user') }}">
-                <div class="i-wrapper">
+                <div class="i-wrapper i-wrapper-hover">
                     <div {% if request.path==url_for('user') %} class="active" {% endif %}>
                         <i class="fa-solid fa-circle-user"></i>
                     </div>
@@ -53,7 +53,7 @@
         <nav class="nav-wrapper hidden-content">
             <a href="{{ url_for('home') }}">
                 <div class="icon-box">
-                    <div class="i-wrapper">
+                    <div class="i-wrapper i-wrapper-hover">
                         <div {% if request.path==url_for('home') %} class="active" {% endif %}>
                             <i class="fa-solid fa-house"></i>
                         </div>
@@ -64,7 +64,7 @@
 
             <a href="{{ url_for('short') }}">
                 <div class="icon-box">
-                    <div class="i-wrapper">
+                    <div class="i-wrapper i-wrapper-hover">
                         <div {% if request.path==url_for('short') %} class="active" {% endif %}>
                             <i class="fa-solid fa-circle-play"></i>
                         </div>
@@ -75,7 +75,7 @@
 
             <a href="{{ url_for('music_make') }}">
                 <div class="icon-box">
-                    <div class="i-wrapper">
+                    <div class="i-wrapper i-wrapper-hover">
                         <div {% if request.path==url_for('music_make') %} class="active" {% endif %}>
                             <i class="fa-solid fa-circle-plus"></i>
                         </div>
@@ -86,7 +86,7 @@
 
             <a href="{{ url_for('good') }}">
                 <div class="icon-box">
-                    <div class="i-wrapper">
+                    <div class="i-wrapper i-wrapper-hover">
                         <div {% if request.path==url_for('good') %} class="active" {% endif %}>
                             <i class="fa-solid fa-heart"></i>
                         </div>
@@ -97,7 +97,7 @@
 
             <a href="{{ url_for('cart') }}">
                 <div class="icon-box">
-                    <div class="i-wrapper">
+                    <div class="i-wrapper i-wrapper-hover">
                         <div {% if request.path==url_for('cart') %} class="active" {% endif %}>
                             <i class="fa-solid fa-cart-shopping"></i>
                         </div>
@@ -108,7 +108,7 @@
 
             <a href="{{ url_for('history') }}">
                 <div class="icon-box">
-                    <div class="i-wrapper">
+                    <div class="i-wrapper i-wrapper-hover">
                         <div {% if request.path==url_for('history') %} class="active" {% endif %}>
                             <i class="fa-solid fa-rotate-left"></i>
                         </div>

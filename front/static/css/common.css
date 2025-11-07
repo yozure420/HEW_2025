@@ -254,13 +254,13 @@ input[type="text"] {
     }
 }
 
-.i-wrapper:hover {
+.i-wrapper-hover:hover {
     animation: poyo .6s ease 0s 1 normal running none;
     background-color: rgba(255, 255, 255, 0.2);
     transition: 0.1s;
 }
 
-.i-wrapper .active {
+.i-wrapper-hover .active {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
 }

@@ -18,18 +18,27 @@
         <h2>{{ product.music }}</h2>
         <p>¥{{ product.price }}</p>
 
-        <div class="trial-listening-wrapper">
-            <button class="trial-listening">
-                <i class="fa-solid fa-play"></i>
+        <div class="product-detail-icon-wrapper">
+                <i class="fa-regular fa-heart product-detail-icon i-wrapper-hover detail-i-hover"></i>
+                <i class="fa-regular fa-message product-detail-icon i-wrapper-hover detail-i-hover"></i>
+
+            <button class="trial-listening i-wrapper-hover detail-i-hover">
                 <p>試聴</p>
+                <i class="fa-solid fa-circle-play"></i>
             </button><!-- end trial-listening -->
-        </div><!-- end trial-listening-wrapper -->
+        </div><!-- end product-detail-icon-wrapper -->
 
         <form id="add-to-cart-form">
             <input type="hidden" name="product_id" value="">
             <div class="puroduct-detail-button-container">
-                <button type="submit" id="add-to-cart-btn">カートに入れる</button>
-                <button type="submit" id="buy-now-btn" data-action="buy_now">すぐ買う</button>
+                <button type="submit" id="add-to-cart-btn">
+                    <p>カートに入れる</p>
+                    <i class="fa-solid fa-cart-plus"></i>
+                </button>
+                <button type="submit" id="buy-now-btn" data-action="buy_now">
+                    <p>すぐに買う</p>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
             </div><!-- end puroduct-detail-button-container -->
         </form>
 
