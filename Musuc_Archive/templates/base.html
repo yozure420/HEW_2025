@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+
+    <!--font-awesomeの読み込み-->
+    <link href="https://use.fontawesome.com/releases/v6.6.0/css/all.css" rel="stylesheet">
+
+    <!-- googleフォントの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+    {% block head_extra %}{% endblock %}
+</head>
+
+<body>
+    <header>
+        <!-- ロゴ -->
+        <div class="logo-wrapper hidden-content-header">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="ロゴ">
+        </div><!-- end logo-wrapper -->
+
+        <!-- 検索窓 -->
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="search" placeholder="キーワードで検索">
+        </div><!-- end search-box -->
+
+        <div class="icon-wrapper hidden-content-header">
+            <!-- 通知アイコン -->
+            <a href="">
+                <div class="i-wrapper">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+            </a>
+
+            <!-- ユーザーアイコン -->
+            <a href="{{ url_for('user') }}">
+                <div class="i-wrapper">
+                    <div {% if request.path==url_for('user') %} class="active" {% endif %}>
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                </div>
+            </a>
+        </div><!-- end icon-wrapper -->
+    </header>
+
+    <main class="main-wrapper">
+        <nav class="nav-wrapper hidden-content">
+            <a href="{{ url_for('home') }}">
+                <div class="icon-box">
+                    <div class="i-wrapper">
+                        <div {% if request.path==url_for('home') %} class="active" {% endif %}>
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                    </div>
+                    <p class="p-none">Home</p>
+                </div>
+            </a>
+
+            <a href="{{ url_for('short') }}">
+                <div class="icon-box">
+                    <div class="i-wrapper">
+                        <div {% if request.path==url_for('short') %} class="active" {% endif %}>
+                            <i class="fa-solid fa-circle-play"></i>
+                        </div>
+                    </div>
+                    <p class="p-none">Short</p>
+                </div>
+            </a>
+
+            <a href="{{ url_for('music_make') }}">
+                <div class="icon-box">
+                    <div class="i-wrapper">
+                        <div {% if request.path==url_for('music_make') %} class="active" {% endif %}>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                    </div>
+                    <p class="p-none">楽曲制作</p>
+                </div>
+            </a>
+
+            <a href="{{ url_for('good') }}">
+                <div class="icon-box">
+                    <div class="i-wrapper">
+                        <div {% if request.path==url_for('good') %} class="active" {% endif %}>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <p class="p-none">いいね</p>
+                </div>
+            </a>
+
+            <a href="{{ url_for('cart') }}">
+                <div class="icon-box">
+                    <div class="i-wrapper">
+                        <div {% if request.path==url_for('cart') %} class="active" {% endif %}>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                    <p class="p-none">カート</p>
+                </div>
+            </a>
+
+            <a href="{{ url_for('history') }}">
+                <div class="icon-box">
+                    <div class="i-wrapper">
+                        <div {% if request.path==url_for('history') %} class="active" {% endif %}>
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </div>
+                    </div>
+                    <p class="p-none">閲覧履歴</p>
+                </div>
+            </a>
+        </nav>
+
+        <div class="hidden-content">
+            {% block content %}
+            {% endblock %}
+        </div><!-- end hidden-content -->
+
+        <div class="search-hidden-box hidden">
+            <div class="search-tag-wrapper">
+                <div class="search-tag-content">
+                    <p>#○○○○</p>
+                </div><!-- search-tag-content -->
+
+                <div class="search-tag-content">
+                    <p>#○○</p>
+                </div><!-- search-tag-content -->
+
+                <div class="search-tag-content">
+                    <p>#○○○○○○</p>
+                </div><!-- search-tag-content -->
+
+                <div class="search-tag-content">
+                    <p>#○○○○</p>
+                </div><!-- search-tag-content -->
+            </div><!-- end search-tag-wrapper -->
+
+            <hr>
+
+            <div class="search-history-wrapper">
+                <div class="search-history-content">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <p>○○○○○○○○○○○○○○○○</p>
+                </div><!-- end search-history-content -->
+
+                <div class="search-history-content">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <p>○○○○○○○○○○</p>
+                </div><!-- end search-history-content -->
+
+                <div class="search-history-content">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <p>○○○○○○○○○○○○</p>
+                </div><!-- end search-history-content -->
+            </div><!-- end search-history-wrapper -->
+        </div>
+
+        <script src="{{ url_for('static', filename='js/search.js') }}"></script>
+    </main><!-- end main-wrapper -->
+
+    <footer class="footer-wrapper">
+        <hr>
+        <div class="footer-copy-wrapper">
+            <p><small>&copy;コピーライト</small></p>
+        </div><!-- end footer-copy-wrapper -->
+    </footer><!-- end footer-wrapper -->
+</body>
+
+</html>

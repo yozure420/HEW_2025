@@ -1,0 +1,304 @@
+/* 音楽・素材切り替えボタン */
+.toggle-button-wrapper {
+    width: fit-content;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    border-radius: 20px;
+    margin: 10px auto 30px;
+}
+
+.toggle-button-wrapper p {
+    padding: 3px 40px;
+    font-size: 12px;
+}
+
+.select-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    color: white;
+}
+
+/* おすすめ */
+.top-list-wrapper,
+.music-list-wrapper {
+    width: 80%;
+    max-width: 1000px;
+    margin: 100px auto 10px;
+}
+
+.music-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.music-list-content {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.music-list-content:hover {
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.7);
+    transition: 0.15s;
+}
+
+.music-list-thumbnail {
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(-45deg, #67D944, #CFCD85);
+    border-radius: 30%;
+    text-align: center;
+    width: 50px;
+    border: none;
+    container-type: inline-size;
+}
+
+.music-list-thumbnail i {
+    line-height: 50px;
+    font-size: 20cqw;
+    color: white;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 30%;
+    border: none;
+}
+
+.music-list-character-wrapper {
+    flex-grow: 1;
+    height: 50px;
+    color: white;
+    margin-left: 10px;
+    width: 150px;
+}
+
+.music-list-character-small,
+.music-list-character {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.music-list-character-small p {
+    line-height: 20px;
+    font-size: small;
+}
+
+.music {
+    width: 80%;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+.link-icon {
+    margin-left: auto;
+    color: white;
+    font-size: small;
+}
+
+.name {
+    margin-right: auto;
+    width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price {
+    margin-left: auto;
+}
+
+.music-list-recommendation-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.music-list-recommendation-wrapper h2 {
+    /* font-weight: normal; */
+    color: white;
+    font-size: 30px;
+}
+
+.music-list-recommendation-viewmore {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* ふきだし */
+.music-list-character {
+    position: relative;
+}
+
+.fukidashi {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    z-index: 10;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.music-list-character .link-icon:hover+.fukidashi {
+    display: block;
+    opacity: 1;
+}
+
+/* おすすめユーザー */
+.user-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 2em;
+}
+
+.user-list-content {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 12px 20px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
+.user-list-content:hover {
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.7);
+    transition: 0.15s;
+}
+
+.user-icon-wrapper {
+    container-type: inline-size;
+}
+
+.user-icon-wrapper i {
+    font-size: 80cqw;
+}
+
+.user-icon-wrapper p {
+    font-size: 20cqw;
+}
+
+.user-follow-wrapper {
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-top: 10px;
+    container-type: inline-size;
+}
+
+.user-follow-wrapper p {
+    font-size: 20cqw;
+}
+
+.icon-hover-background {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 音楽再生時 */
+.hidden-play-content-wrapper {
+    width: calc(100% / 2);
+    background-color: #272727;
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.7);
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 20px;
+    color: white;
+}
+
+.play-width {
+    width: calc(100% / 3);
+}
+
+.play-content-left {
+    text-align: left;
+    display: flex;
+}
+
+.play-thumbnail {
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(-45deg, #67D944, #CFCD85);
+    border-radius: 30%;
+    text-align: center;
+    border: none;
+    container-type: inline-size;
+}
+
+.play-thumbnail i {
+    line-height: 50px;
+    font-size: 20cqw;
+    color: white;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 30%;
+    border: none;
+}
+
+.play-character {
+    margin-left: 10px;
+}
+
+.play-music {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.play-name {
+    line-height: 20px;
+}
+
+.play-content-center {
+    text-align: center;
+    align-items: center;
+    height: 50px;
+}
+
+.play-content-center i {
+    vertical-align: middle;
+}
+
+.step-icon {
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.pause-icon {
+    font-size: 35px;
+    line-height: 50px;
+}
+
+.play-content-center i {
+    margin: 0 20px;
+}
+
+.play-content-right {
+    text-align: right;
+    font-size: 20px;
+    height: 50px;
+    align-items: center;
+    line-height: 50px;
+}
+
+.play-content-right i {
+    margin: 0 5px;
+}
+
+.play-hidden {
+    display: none;
+}

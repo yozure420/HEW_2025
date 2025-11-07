@@ -1,0 +1,29 @@
+    <nav>
+        <ul>
+            <!-- カート -->
+            <li><a href="{{ url_for('cart')}}">カート</a></li>
+
+            <!-- いいね -->
+            <li><a href="{{url_for('good')}}">いいね</a></li>
+
+            <!-- history -->
+            <li><a href="{{ url_for('history')}}">履歴</a></li>
+
+            <!-- ホーム -->
+            <li><a href="{{ url_for('home')}}">ホーム</a></li>
+
+            <!-- 音楽 -->
+            <li><a href="{{ url_for('music_list')}}">音楽リスト</a></li>
+
+            <!-- 音楽作成-->
+            <li><a href="{{ url_for('music_make')}}">音楽作成</a></li>
+
+            <!--short-->
+            <li><a href="{{ url_for('short')}}">ショート動画</a></li>
+
+            <!-- ユーザー -->
+            <li><a href="{{ url_for('user')}}">ユーザー</a></li>
+
+            
+        </ul>
+    </nav>
