@@ -137,10 +137,33 @@ font-size: 18px;
 opacity: 0.8;
 }
 
+/* メインコンテンツ */
+
+.main-content-two-column {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    min-height: calc(100vh - 90px); /* ヘッダーの高さを引いた値 */
+}
+
+.main-content-left {
+    flex: 1;
+    overflow: auto;
+    min-width: 60%;
+}
+
 /* 音楽リスト */
+
+.music-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .music-list-wrapper {
-width: 80%;
-margin: 50px auto 100px;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 .music-list-recommendation-wrapper {
@@ -179,6 +202,7 @@ padding: 15px;
 display: flex;
 align-items: center;
 transition: transform 0.3s, background 0.3s;
+min-height: 90px; /* コンテンツの最小高さを設定 */
 }
 
 .music-list-content:hover {
@@ -222,26 +246,17 @@ opacity: 0.8;
     margin-top: 50px; /* 必要なら余白も調整 */
 }
 
-.main-content-two-column {
-    display: flex;
-    gap: 40px;
-}
-
-.main-content-left {
-    flex: 6;
-}
+/* 履歴管理 */
 
 .history-side-panel {
-    flex: 4;
+    width: 300px;
+    height: 30%;
     background: rgba(255,255,255,0.08);
     border-radius: 18px;
     padding: 30px 20px;
-    min-width: 260px;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    color: #fff;
+    position: sticky;
+    top: 90px; /* ヘッダーの高さに合わせる */
+    overflow-y: auto;
 }
 
 .history-side-panel h3 {
@@ -262,8 +277,12 @@ opacity: 0.8;
     padding: 2px 3px;
     border-radius: 8px;
     border: none;
-    background: rgba(255,255,255,0.15);
-    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+.history-search input::placeholder {
+    color: white;
 }
 
 .history-search button,
