@@ -10,6 +10,22 @@
 
 {# 中身 #}
 {% block content %}
+<div class="product-detail-user-wrapper">
+    <div class="product-detail-user">
+        <div class="user-icon"><i class="fa-solid fa-circle-user"></i></div>
+        <div class="user-name-wrapper">
+            <div class="user-name">{{ product.name }}</div>
+            <div class="user-id">＠aaaaaaaaaaaaaaaaa</div>
+        </div><!-- end user-name-wrapper -->
+    </div><!-- end product-detail-user -->
+
+    <div class="product-detail-follow">
+        <p>フォローする</p>
+    </div>
+</div><!-- end product-detail-user-wrapper -->
+
+<hr class="product-detail-hr">
+
 <div class="product-detail-wrapper">
     <div class="product-detail-thumbnail">
         <i class="fa-solid fa-music"></i>
@@ -19,8 +35,8 @@
         <p>¥{{ product.price }}</p>
 
         <div class="product-detail-icon-wrapper">
-                <i class="fa-regular fa-heart product-detail-icon i-wrapper-hover detail-i-hover"></i>
-                <i class="fa-regular fa-message product-detail-icon i-wrapper-hover detail-i-hover"></i>
+            <i class="fa-regular fa-heart product-detail-icon i-wrapper-hover detail-i-hover"></i>
+            <i class="fa-regular fa-message product-detail-icon i-wrapper-hover detail-i-hover"></i>
 
             <button class="trial-listening i-wrapper-hover detail-i-hover">
                 <p>試聴</p>
