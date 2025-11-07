@@ -15,15 +15,29 @@
         <i class="fa-solid fa-music"></i>
     </div><!-- end product-detail-thumbnail -->
     <div class="product-detail-right">
-        <h2>曲名</h2>
-        <p>¥1000</p>
+        <h2>{{ product.music }}</h2>
+        <p>¥{{ product.price }}</p>
+
+        <div class="trial-listening-wrapper">
+            <button class="trial-listening">
+                <i class="fa-solid fa-play"></i>
+                <p>試聴</p>
+            </button><!-- end trial-listening -->
+        </div><!-- end trial-listening-wrapper -->
 
         <form id="add-to-cart-form">
             <input type="hidden" name="product_id" value="">
-            <button type="submit" id="add-to-cart-btn">カートに入れる</button>
-            <button type="submit" id="buy-now-btn" data-action="buy_now">すぐ買う</button>
+            <div class="puroduct-detail-button-container">
+                <button type="submit" id="add-to-cart-btn">カートに入れる</button>
+                <button type="submit" id="buy-now-btn" data-action="buy_now">すぐ買う</button>
+            </div><!-- end puroduct-detail-button-container -->
         </form>
 
+        <div class="product-detail-explanation">
+            <p>
+                ああああああああああああああああああああああああああああああああああああああああああああああああああ。
+            </p>
+        </div><!-- end product-detail--explanation -->
     </div><!-- end product-detail-right -->
 </div><!-- end product-detail-wrapper -->
 {% endblock %}

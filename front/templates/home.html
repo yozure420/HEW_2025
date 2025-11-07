@@ -53,7 +53,7 @@
             <div class="music-list-character-wrapper">
                 <div class="music-list-character">
                     <p class="music">{{ user.music }}</p>
-                    <a href="{{ url_for('product_detail') }}" class="link-icon">
+                    <a href="{{ url_for('product_detail', product_id=user.id) }}" class="link-icon">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
                     <div class="fukidashi">商品ページへ行く</div>
