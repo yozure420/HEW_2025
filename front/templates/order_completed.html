@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{# title #}
+{% block title %}order_completed{% endblock %}
+
+{# headに追加要素あれば #}
+{% block head_extra %}
+<style>
+    h2 {
+        text-align: center;
+        color: white;
+        height: 100vh;
+    }
+</style>
+{% endblock %}
+
+{# 中身 #}
+{% block content %}
+<h2>ご注文ありがとうございます。</h2>
+{% endblock %}

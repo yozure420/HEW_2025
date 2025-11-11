@@ -93,5 +93,11 @@ def buy_now():
         product=product
     )
 
+@app.route('/order_completed')
+def order_completed():
+    return render_template(
+        'order_completed.html'
+    )
+
 if __name__ == '__main__':
     app.run('0.0.0.0', 80, True)

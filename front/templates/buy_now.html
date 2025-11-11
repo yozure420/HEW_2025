@@ -11,7 +11,7 @@
 {# 中身 #}
 {% block content %}
 
-<form id="payment-form" action="" method="POST">
+<form id="payment-form" action="{{ url_for('order_completed') }}">
     <div class="buy-now-wrapper">
         <div class="buy-content-flex">
             <div class="pay">
