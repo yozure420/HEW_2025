@@ -79,5 +79,11 @@ def product_detail():
         product=product
     )
 
+@app.route('/buy_now')
+def buy_now():
+    return render_template(
+        'buy_now.html'
+    )
+
 if __name__ == '__main__':
     app.run('0.0.0.0', 80, True)
