@@ -20,9 +20,9 @@
 <body>
     <header>
         <!-- ロゴ -->
-        <div class="logo-wrapper hidden-content-header">
+        <a href="{{ url_for('home') }}" class="logo-wrapper hidden-content-header">
             <img src="{{ url_for('static', filename='img/logo.png') }}" alt="ロゴ">
-        </div><!-- end logo-wrapper -->
+        </a><!-- end logo-wrapper -->
 
         <!-- 検索窓 -->
         <div class="search-box">
