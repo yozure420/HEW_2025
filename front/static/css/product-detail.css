@@ -154,3 +154,12 @@
 .detail-i-hover:hover {
     border: 1px solid rgba(255, 255, 255, 0);
 }
+
+.product-detail-back {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.product-detail-back a p {
+    color: white;
+}

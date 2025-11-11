@@ -15,7 +15,7 @@
         <div class="user-icon"><i class="fa-solid fa-circle-user"></i></div>
         <div class="user-name-wrapper">
             <div class="user-name">{{ product.name }}</div>
-            <div class="user-id">＠aaaaaaaaaaaaaaaaa</div>
+            <div class="user-id">＠{{ product.id }}</div>
         </div><!-- end user-name-wrapper -->
     </div><!-- end product-detail-user -->
 
@@ -63,4 +63,10 @@
         </div><!-- end product-detail--explanation -->
     </div><!-- end product-detail-right -->
 </div><!-- end product-detail-wrapper -->
+
+<div class="product-detail-back">
+    <a href="{{ url_for('home') }}">
+        <p>↼　back</p>
+    </a>
+</div><!-- end product-detail-back -->
 {% endblock %}
