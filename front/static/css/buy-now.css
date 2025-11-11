@@ -1,0 +1,69 @@
+.buy-now-wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy-content {
+    display: flex;
+    align-items: center;
+    width: 450px;
+    margin: 50px 0;
+}
+
+.buy-content-character {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    padding-left: 20px;
+    line-height: 50px;
+    justify-content: space-between;
+}
+
+.buy-content-thumbnail {
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(-45deg, #67D944, #CFCD85);
+    border-radius: 30%;
+    text-align: center;
+    width: 50px;
+    border: none;
+    container-type: inline-size;
+}
+
+.buy-content-thumbnail i {
+    line-height: 50px;
+    font-size: 20cqw;
+    color: white;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 30%;
+    border: none;
+}
+
+.buy-content-flex {
+    width: 450px;
+}
+
+.buy-confirmed {
+    width: 450px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+.pay {
+    height: 200px;
+}
+
+.buy-confirmed-character {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.kuuhaku {
+    height: 100vh;
+}
+

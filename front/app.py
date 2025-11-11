@@ -79,10 +79,18 @@ def product_detail():
         product=product
     )
 
-@app.route('/buy_now')
+@app.route('/buy_now', methods=['POST'])
 def buy_now():
+    product_id = request.args.get('product_id', type=str)
+
+    product = None
+    for user in users:
+        if user.id == product_id:
+            product = user
+            break
     return render_template(
-        'buy_now.html'
+        'buy_now.html',
+        product=product
     )
 
 if __name__ == '__main__':

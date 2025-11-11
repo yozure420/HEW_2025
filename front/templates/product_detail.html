@@ -44,18 +44,19 @@
             </button><!-- end trial-listening -->
         </div><!-- end product-detail-icon-wrapper -->
 
-        <form id="add-to-cart-form">
-            <input type="hidden" name="product_id" value="">
+        <form id="add-to-cart-form" method="POST" action="">
+            <input type="hidden" name="product_id" value="{{ product.id }}">
             <div class="puroduct-detail-button-container">
-                <button type="submit" id="add-to-cart-btn">
+                <button type="submit" name="action_type" value="add_to_cart" id="add-to-cart-btn">
                     <p>カートに入れる</p>
                     <i class="fa-solid fa-cart-plus"></i>
                 </button>
-                <button type="submit" id="buy-now-btn" data-action="buy_now" formaction="{{ url_for('buy_now') }}">
+
+                <button type="submit" name="action_type" value="buy_now" id="buy-now-btn" formaction="{{ url_for('buy_now', product_id=product.id) }}">
                     <p>すぐに買う</p>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </button>
-            </div><!-- end puroduct-detail-button-container -->
+            </div>
         </form>
 
         <div class="product-detail-explanation">

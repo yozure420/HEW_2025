@@ -4,8 +4,76 @@
 {% block title %}Buy now{% endblock %}
 
 {# headに追加要素あれば #}
-{% block head_extra %}{% endblock %}
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/buy-now.css') }}">
+{% endblock %}
 
 {# 中身 #}
 {% block content %}
+
+<form id="payment-form" action="" method="POST">
+    <div class="buy-now-wrapper">
+        <div class="buy-content-flex">
+            <div class="pay">
+                <h2>お支払い方法を選択</h2>
+                <div>
+                    <input type="radio" id="card" name="payment_method" value="credit_card" checked>
+                    <label for="card">クレジットカード</label>
+
+                    <input type="radio" id="bank" name="payment_method" value="bank_transfer">
+                    <label for="bank">銀行振込</label>
+
+                    <input type="radio" id="cod" name="payment_method" value="cash_on_delivery">
+                    <label for="cod">代金引換</label>
+                </div>
+
+                <div id="credit_card_details" class="payment-details">
+                    <h3>カード情報</h3>
+                    <input type="text" name="card_number" placeholder="カード番号">
+                </div>
+
+                <div id="bank_transfer_details" class="payment-details" style="display:none;">
+                    <p>ご注文後に振込先口座情報をメールでお知らせします。</p>
+                </div>
+
+                <div id="cash_on_delivery_details" class="payment-details" style="display:none;">
+                    <p>商品受け取り時に現金でお支払いください。</p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="buy-content">
+                <div class="buy-content-thumbnail">
+                    <i class="fa-solid fa-music"></i>
+                </div><!-- end buy-content-thumbnail -->
+                <div class="buy-content-character">
+                    <p>{{ product.music }}</p>
+                    <p class="buy-now-price">¥{{ product.price }}</p>
+                </div><!-- end buy-content-character -->
+            </div><!-- end buy-content -->
+
+            <hr>
+
+        </div>
+
+        <div class="buy-confirmed">
+            <div class="buy-confirmed-character">
+                <p>商品</p>
+                <p>¥{{ product.price }}</p>
+            </div>
+            <div class="buy-confirmed-character">
+                <p>合計</p>
+                <p>¥{{ product.price }}</p>
+            </div>
+            <button type="submit">注文を確定する</button>
+        </div><!-- end buy-confirmed -->
+    </div><!-- end buy-now-wrapper -->
+</form>
+
+<div class="kuuhaku"></div>
+
+<!-- JS -->
+<script src="{{ url_for('static', filename='js/buynow.js') }}"></script>
 {% endblock %}
